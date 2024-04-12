@@ -7,7 +7,7 @@ export default class HolbertonCourse {
     if (typeof length !== 'number' || Number.isNaN(length) || length <= 0) {
       throw new TypeError('Length must be a positive number');
     }
-    if (!Array.isArray(students) || !students.every(student => typeof student === 'string')) {
+    if (!Array.isArray(students) || !students.every((student) => typeof student === 'string')) {
       throw new TypeError('Students must be an array of strings');
     }
 
@@ -49,7 +49,7 @@ export default class HolbertonCourse {
   }
 
   set students(newStudents) {
-    if (Array.isArray(newStudents) && newStudents.every(student => typeof student === 'string')) {
+    if (Array.isArray(newStudents) && newStudents.every((student) => typeof student === 'string')) {
       this._students = newStudents;
     } else {
       throw new TypeError('Students must be an array of strings');
